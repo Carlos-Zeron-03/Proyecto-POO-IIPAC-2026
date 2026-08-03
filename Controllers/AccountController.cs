@@ -18,6 +18,11 @@ namespace Proyecto_POO_IIPAC_2026.Controllers
             _signInManager = signInManager;
         }
 
+
+        // ==========================================
+        // LOGIN
+        // ==========================================
+
         [HttpPost("login")]
         public async Task<IActionResult> Login(
             [FromBody] LoginRequest request)
@@ -75,6 +80,11 @@ namespace Proyecto_POO_IIPAC_2026.Controllers
             });
         }
 
+
+        // ==========================================
+        // LOGOUT
+        // ==========================================
+
         [HttpPost("logout")]
         public async Task<IActionResult> Logout()
         {
@@ -85,6 +95,11 @@ namespace Proyecto_POO_IIPAC_2026.Controllers
                 mensaje = "Sesión cerrada correctamente."
             });
         }
+
+
+        // ==========================================
+        // VER USUARIO ACTUAL
+        // ==========================================
 
         [HttpGet("me")]
         public async Task<IActionResult> Me()
@@ -121,6 +136,11 @@ namespace Proyecto_POO_IIPAC_2026.Controllers
             });
         }
 
+
+        // ==========================================
+        // ACCESS DENIED
+        // ==========================================
+
         [HttpGet("access-denied")]
         public IActionResult AccessDenied()
         {
@@ -132,7 +152,12 @@ namespace Proyecto_POO_IIPAC_2026.Controllers
                 });
         }
     }
-    
+
+
+    // ==========================================
+    // MODELO PARA LOGIN
+    // ==========================================
+
     public class LoginRequest
     {
         public string Email { get; set; } = "";

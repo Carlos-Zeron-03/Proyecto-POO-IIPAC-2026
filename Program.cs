@@ -5,21 +5,35 @@ using Proyecto_POO_IIPAC_2026.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 
+// ==========================================
 // BASE DE DATOS
+// ==========================================
+
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite("Data Source=medicamentos.db"));
 
 
+// ==========================================
 // CONTROLADORES
+// ==========================================
+
 builder.Services.AddControllers();
 
+
+// ==========================================
 // ASP.NET IDENTITY
+// ==========================================
+
 builder.Services
     .AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
 
+
+// ==========================================
 // CONFIGURACIÓN DE COOKIE
+// ==========================================
+
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/api/account/login";
@@ -43,7 +57,11 @@ builder.Services.ConfigureApplicationCookie(options =>
 
 var app = builder.Build();
 
+
+// ==========================================
 // CREAR ROLES Y USUARIOS
+// ==========================================
+
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
@@ -54,7 +72,11 @@ using (var scope = app.Services.CreateScope())
     var userManager =
         services.GetRequiredService<UserManager<IdentityUser>>();
 
+
+    // ==========================================
     // CREAR ROLES
+    // ==========================================
+
     string[] roles =
     {
         "Doctor",
@@ -70,7 +92,11 @@ using (var scope = app.Services.CreateScope())
         }
     }
 
+
+    // ==========================================
     // CREAR DOCTOR
+    // ==========================================
+
     string doctorEmail = "doctor@gmail.com";
     string doctorPassword = "Doctor123!";
 
@@ -110,7 +136,11 @@ using (var scope = app.Services.CreateScope())
         }
     }
 
+
+    // ==========================================
     // CREAR ENFERMERO
+    // ==========================================
+
     string enfermeroEmail = "enfermero@gmail.com";
     string enfermeroPassword = "Enfermero123!";
 
@@ -151,8 +181,19 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
+
+// ==========================================
+// MIDDLEWARE
+// ==========================================
+
 app.UseAuthentication();
+
 app.UseAuthorization();
+
+
+// ==========================================
+// CONTROLADORES
+// ==========================================
 
 app.MapControllers();
 
