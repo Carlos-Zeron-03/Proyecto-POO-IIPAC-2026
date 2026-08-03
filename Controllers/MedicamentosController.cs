@@ -19,12 +19,6 @@ namespace Proyecto_POO_IIPAC_2026.Controllers
             _context = context;
         }
 
-
-        // ==========================================
-        // GET
-        // DOCTOR + ENFERMERO
-        // ==========================================
-
         [HttpGet]
         public async Task<IActionResult> GetMedicamentos()
         {
@@ -33,12 +27,6 @@ namespace Proyecto_POO_IIPAC_2026.Controllers
 
             return Ok(medicamentos);
         }
-
-
-        // ==========================================
-        // GET POR ID
-        // DOCTOR + ENFERMERO
-        // ==========================================
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetMedicamento(
@@ -61,11 +49,6 @@ namespace Proyecto_POO_IIPAC_2026.Controllers
             return Ok(medicamento);
         }
 
-
-        // ==========================================
-        // POST
-        // SOLO DOCTOR
-        // ==========================================
 
         [HttpPost]
         [Authorize(Roles = "Doctor")]
@@ -92,11 +75,6 @@ namespace Proyecto_POO_IIPAC_2026.Controllers
                 medicamento);
         }
 
-
-        // ==========================================
-        // PUT
-        // SOLO DOCTOR
-        // ==========================================
 
         [HttpPut("{id}")]
         [Authorize(Roles = "Doctor")]
@@ -149,12 +127,6 @@ namespace Proyecto_POO_IIPAC_2026.Controllers
                 medicamento = existente
             });
         }
-
-
-        // ==========================================
-        // DELETE
-        // SOLO DOCTOR
-        // ==========================================
 
         [HttpDelete("{id}")]
         [Authorize(Roles = "Doctor")]
