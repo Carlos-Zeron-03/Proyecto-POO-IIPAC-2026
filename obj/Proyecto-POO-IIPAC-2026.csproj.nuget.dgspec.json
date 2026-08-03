@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Proyectos-POO\\Proyecto-POO-IIPAC-2026\\Proyecto-POO-IIPAC-2026.csproj": {}
+    "C:\\Users\\carlo\\Projects 2\\Poyecto-POO-IIPAC-2026\\Proyecto-POO-IIPAC-2026\\Proyecto-POO-IIPAC-2026.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Proyectos-POO\\Proyecto-POO-IIPAC-2026\\Proyecto-POO-IIPAC-2026.csproj": {
+    "C:\\Users\\carlo\\Projects 2\\Poyecto-POO-IIPAC-2026\\Proyecto-POO-IIPAC-2026\\Proyecto-POO-IIPAC-2026.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Proyectos-POO\\Proyecto-POO-IIPAC-2026\\Proyecto-POO-IIPAC-2026.csproj",
+        "projectUniqueName": "C:\\Users\\carlo\\Projects 2\\Poyecto-POO-IIPAC-2026\\Proyecto-POO-IIPAC-2026\\Proyecto-POO-IIPAC-2026.csproj",
         "projectName": "Proyecto-POO-IIPAC-2026",
-        "projectPath": "C:\\Users\\user\\Proyectos-POO\\Proyecto-POO-IIPAC-2026\\Proyecto-POO-IIPAC-2026.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Proyectos-POO\\Proyecto-POO-IIPAC-2026\\obj\\",
+        "projectPath": "C:\\Users\\carlo\\Projects 2\\Poyecto-POO-IIPAC-2026\\Proyecto-POO-IIPAC-2026\\Proyecto-POO-IIPAC-2026.csproj",
+        "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\carlo\\Projects 2\\Poyecto-POO-IIPAC-2026\\Proyecto-POO-IIPAC-2026\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\carlo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -24,7 +24,6 @@
         },
         "frameworks": {
           "net10.0": {
-            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -39,20 +38,41 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[10.0.10, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[10.0.2, )"
+              "version": "[10.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[10.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[10.0.10, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[10.0.10, )"
             },
             "Scalar.AspNetCore": {
               "target": "Package",
-              "version": "[2.16.16, )"
+              "version": "[2.16.17, )"
             }
           },
           "imports": [
@@ -74,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

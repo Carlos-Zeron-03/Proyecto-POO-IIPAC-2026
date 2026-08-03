@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Proyecto-POO-IIPAC-2026")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bda4b685ea9345636bda5b81f35c8cb468e5727e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c570b9b8fd6da1e25ec38f249e1d687d8cb44395")]
 [assembly: System.Reflection.AssemblyProductAttribute("Proyecto-POO-IIPAC-2026")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Proyecto-POO-IIPAC-2026")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
